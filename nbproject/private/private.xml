@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project-private xmlns="http://www.netbeans.org/ns/project-private/1">
+    <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
+    <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
+        <group>
+            <file>file:/C:/Users/Cesar/Documents/leagues/leagues/src/java/br/edu/unifei/leagues/controle/bean/JogadorBean.java</file>
+            <file>file:/C:/Users/Cesar/Documents/leagues/leagues/web/Coach/delete.xhtml</file>
+            <file>file:/C:/Users/Cesar/Documents/leagues/leagues/src/java/br/edu/unifei/leagues/modelo/Patrocinador.java</file>
+            <file>file:/C:/Users/Cesar/Documents/leagues/leagues/web/Times/create.xhtml</file>
+            <file>file:/C:/Users/Cesar/Documents/leagues/leagues/web/WEB-INF/glassfish-resources.xml</file>
+            <file>file:/C:/Users/Cesar/Documents/leagues/leagues/web/Midia/delete.xhtml</file>
+            <file>file:/C:/Users/Cesar/Documents/leagues/leagues/web/Jogador/update.xhtml</file>
+            <file>file:/C:/Users/Cesar/Documents/leagues/leagues/src/java/br/edu/unifei/leagues/modelo/Jogador.java</file>
+            <file>file:/C:/Users/Cesar/Documents/leagues/leagues/web/Times/delete.xhtml</file>
+            <file>file:/C:/Users/Cesar/Documents/leagues/leagues/web/Midia/create.xhtml</file>
+            <file>file:/C:/Users/Cesar/Documents/leagues/leagues/src/conf/persistence.xml</file>
+            <file>file:/C:/Users/Cesar/Documents/leagues/leagues/src/java/br/edu/unifei/leagues/controle/dao/FonteDados.java</file>
+            <file>file:/C:/Users/Cesar/Documents/leagues/leagues/web/Coach/create.xhtml</file>
+            <file>file:/C:/Users/Cesar/Documents/leagues/leagues/web/Midia/form.xhtml</file>
+            <file>file:/C:/Users/Cesar/Documents/leagues/leagues/src/java/br/edu/unifei/leagues/modelo/Midia.java</file>
+            <file>file:/C:/Users/Cesar/Documents/leagues/leagues/web/Coach/form.xhtml</file>
+            <file>file:/C:/Users/Cesar/Documents/leagues/leagues/web/Jogador/delete.xhtml</file>
+            <file>file:/C:/Users/Cesar/Documents/leagues/leagues/src/java/br/edu/unifei/leagues/controle/dao/StaffDao.java</file>
+            <file>file:/C:/Users/Cesar/Documents/leagues/leagues/web/Coach/update.xhtml</file>
+            <file>file:/C:/Users/Cesar/Documents/leagues/leagues/web/Times/form.xhtml</file>
+            <file>file:/C:/Users/Cesar/Documents/leagues/leagues/web/Times/update.xhtml</file>
+            <file>file:/C:/Users/Cesar/Documents/leagues/leagues/web/template_backup.html</file>
+            <file>file:/C:/Users/Cesar/Documents/leagues/leagues/web/Jogador/form.xhtml</file>
+            <file>file:/C:/Users/Cesar/Documents/leagues/leagues/src/java/br/edu/unifei/leagues/modelo/Times.java</file>
+            <file>file:/C:/Users/Cesar/Documents/leagues/leagues/web/resources/css/style.css</file>
+            <file>file:/C:/Users/Cesar/Documents/leagues/leagues/web/template.xhtml</file>
+            <file>file:/C:/Users/Cesar/Documents/leagues/leagues/src/java/br/edu/unifei/leagues/controle/dao/GenericoDao.java</file>
+            <file>file:/C:/Users/Cesar/Documents/leagues/leagues/web/Campeonato/create.xhtml</file>
+            <file>file:/C:/Users/Cesar/Documents/leagues/leagues/src/java/br/edu/unifei/leagues/controle/bean/TimesBean.java</file>
+            <file>file:/C:/Users/Cesar/Documents/leagues/leagues/web/index.xhtml</file>
+            <file>file:/C:/Users/Cesar/Documents/leagues/leagues/src/java/br/edu/unifei/leagues/controle/bean/MidiaBean.java</file>
+            <file>file:/C:/Users/Cesar/Documents/leagues/leagues/src/java/br/edu/unifei/leagues/controle/dao/TimesDao.java</file>
+            <file>file:/C:/Users/Cesar/Documents/leagues/leagues/src/java/br/edu/unifei/leagues/controle/bean/CoachBean.java</file>
+        </group>
+    </open-files>
+</project-private>

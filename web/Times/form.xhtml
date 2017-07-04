@@ -1,0 +1,42 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE composition PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<ui:composition xmlns="http://www.w3.org/1999/xhtml"
+                xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+                xmlns:h="http://xmlns.jcp.org/jsf/html"
+                xmlns:f="http://xmlns.jcp.org/jsf/core"
+                xmlns:p="http://primefaces.org/ui">
+    <ui:fragment>
+        <p:outputLabel value="Nome*:" style="color: white"/>
+        <p:inputText id="nome" value="#{timesBean.time.nome}"
+                     disabled="#{!timesBean.habilitaChave}"
+                     required="true" requiredMessage="digite nome"/>
+        <p:outputLabel value="#{timesBean.msgChave}" style="color:#ffffff " />
+        <p:message for="nome" style="color:white"/>
+        <br/>
+        <h:outputLabel value="Tecnico:" style="color: white"/>
+        <h:selectOneMenu  value="#{timesBean.coachSelecionado}"
+                         disabled="#{!timesBean.habilitaEdicao}">
+            <f:selectItems  value="#{timesBean.listaCoachs}"
+                           var="p" itemLabel="#{p}" itemValue="#{p}"/>                    
+        </h:selectOneMenu>
+        <br/>
+        
+        <h:outputLabel value="Jogadores:" style="color: white"/>
+        <p:selectManyMenu class="menuItem" value="#{timesBean.jogadoresSelecionados}"
+                          disabled="#{!timesBean.habilitaEdicao}" showCheckbox="true">
+            <f:selectItems class ="menuItem" value="#{timesBean.listaJogadores}"
+                           var="e" itemLabel="#{e}" itemValue="#{e}"/>                                        
+        </p:selectManyMenu>
+        <br/>
+        <h:outputLabel value="Patrocinadores:" style="color: white"/>
+        <p:selectManyMenu value="#{timesBean.patrocinadoresSelecinados}"
+                          disabled="#{!timesBean.habilitaEdicao}" showCheckbox="true">
+            <f:selectItems value="#{timesBean.listaPatrocinadores}"
+                           var="e" itemLabel="#{e}" itemValue="#{e}"/>                                        
+        </p:selectManyMenu>
+        <br/>
+        
+        
+        
+    </ui:fragment>
+</ui:composition>

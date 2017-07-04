@@ -1,0 +1,30 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE composition PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<ui:composition xmlns="http://www.w3.org/1999/xhtml"
+                xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+                xmlns:h="http://xmlns.jcp.org/jsf/html"
+                xmlns:f="http://xmlns.jcp.org/jsf/core"
+                xmlns:p="http://primefaces.org/ui">
+    <ui:fragment>
+        <p:outputLabel value="Nome*:" style="color: white"/>
+        <p:inputText id="nome" value="#{localEventoBean.local.nome}"
+                     disabled="#{!localEventoBean.habilitaChave}"
+                     required="true" requiredMessage="digite nome"/>
+        <p:outputLabel value="#{localEventoBean.msgChave}" style="color:#ffffff " />
+        <p:message for="nome" style="color:white"/>
+        <br/>
+        <p:outputLabel value="Enfereço*:" style="color: white"/>
+        <p:inputText id="funcao" value="#{localEventoBean.local.endereco}"
+                     disabled="#{!localEventoBean.habilitaEdicao}"
+                     required="true" requiredMessage="Local precisa de endereço"/>
+        <p:message for="funcao" style="color:white  "/>
+        <br/>
+        <p:outputLabel value="Capacidade*:" style="color: white"/>
+        <p:inputText id="capacidade" value="#{localEventoBean.local.capacidade}"
+                     disabled="#{!localEventoBean.habilitaEdicao}"
+                     required="true" requiredMessage="Local precisa de Capacidade"/>
+        <p:message for="capacidade" style="color:white  "/>
+        <br/>
+        
+    </ui:fragment>
+</ui:composition>

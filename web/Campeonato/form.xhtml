@@ -1,0 +1,49 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE composition PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<ui:composition xmlns="http://www.w3.org/1999/xhtml"
+                xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+                xmlns:h="http://xmlns.jcp.org/jsf/html"
+                xmlns:f="http://xmlns.jcp.org/jsf/core"
+                xmlns:p="http://primefaces.org/ui">
+    <ui:fragment>
+        <p:outputLabel value="Nome*:" style="color: white"/>
+        <p:inputText id="nome" value="#{campeonatoBean.campeonato.nome}"
+                     disabled="#{!campeonatoBean.habilitaChave}"
+                     required="true" requiredMessage="digite nome"/>
+        <p:outputLabel value="#{campeonatoBean.msgChave}"
+                       style="color:#ffffff" />
+        <p:message for="nome" style="color:white;float:left"/>
+        <br/>
+        <p:outputLabel value="Pais do Campeonato:" style="color: white"/>
+        <p:inputText id="funcao" value="#{campeonatoBean.campeonato.paisOrigem}"
+                     disabled="#{!campeonatoBean.habilitaEdicao}"
+                     converterMessage="somente letras"
+                     required="true" requiredMessage="Campeao precisa de funcao"/>
+        <p:message for="funcao" style="color:white; float:left "/>
+        <br/>
+        <p:outputLabel value="Local do Campeonato:" style="color: white"/>
+        <p:selectOneMenu value="#{campeonatoBean.local}" disabled="#{!campeonatoBean.habilitaEdicao}">
+            <f:selectItems value="#{campeonatoBean.listaLocais}" var="item" itemLabel="#{item}" itemValue="#{item}"/>
+        </p:selectOneMenu>
+        <br/>
+        <p:outputLabel value="Midias do Campeonato:" style="color: white"/>
+        <p:selectManyMenu value="#{campeonatoBean.midiasSelecionados}" disabled="#{!campeonatoBean.habilitaEdicao}" showCheckbox="true">
+            <f:selectItems value="#{campeonatoBean.listaMidias}" var="e" itemLabel="#{e}" itemValue="#{e}"/>
+        </p:selectManyMenu>
+        <br/>
+        <p:outputLabel value="Funcionarios do Campeonato:" style="color: white"/>
+        <p:selectManyMenu value="#{campeonatoBean.funcionariosSelecionados}" disabled="#{!campeonatoBean.habilitaEdicao}" showCheckbox="true">
+            <f:selectItems value="#{campeonatoBean.listaFunc}" var="e" itemLabel="#{e}" itemValue="#{e}"/>
+        </p:selectManyMenu>
+        <br/>
+        <p:outputLabel value="Times do Campeonato:" style="color: white"/>
+        <p:selectManyMenu value="#{campeonatoBean.timesSelecionados}" disabled="#{!campeonatoBean.habilitaEdicao}" showCheckbox="true">
+            <f:selectItems value="#{campeonatoBean.listaTimes}" var="e" itemLabel="#{e}" itemValue="#{e}"/>
+        </p:selectManyMenu>
+        <br/>
+        
+        
+        
+        
+    </ui:fragment>
+</ui:composition>

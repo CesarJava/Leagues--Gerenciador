@@ -1,0 +1,33 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE composition PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<ui:composition xmlns="http://www.w3.org/1999/xhtml"
+                xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+                xmlns:h="http://xmlns.jcp.org/jsf/html"
+                xmlns:f="http://xmlns.jcp.org/jsf/core"
+                xmlns:p="http://primefaces.org/ui">
+    <ui:fragment>
+        <p:outputLabel value="Nome*:" style="color: white"/>
+        <p:inputText id="nome" value="#{coachBean.coach.nome}"
+                     disabled="#{!coachBean.habilitaChave}"
+                     required="true" requiredMessage="digite nome"/>
+        <p:outputLabel value="#{coachBean.msgChave}"
+                       style="color:#ffffff" />
+        <p:message for="nome" style="color:white;float:left"/>
+        <br/>
+        <p:outputLabel value="Time Atual*:" style="color: white"/>
+        <p:selectOneMenu value="#{coachBean.timeAtual}"   disabled="#{!coachBean.habilitaEdicao}">
+            <f:selectItem itemLabel="Sem Time" itemValue="Sem Time"/>
+            <f:selectItems value="#{coachBean.listaTimes}" var="tAt" itemLabel="#{tAt}" itemValue="#{tAt}"/>                    
+        </p:selectOneMenu>
+        <br/>
+        <p:outputLabel value="Time Anterior*:" style="color: white"/>
+        <p:selectOneMenu value="#{coachBean.timeAntigo}" disabled="#{!coachBean.habilitaChave}">
+            <f:selectItem itemLabel="Sem Time" itemValue="Sem Time"/>
+            <f:selectItems value="#{coachBean.listaTimes}" var="tAn" itemLabel="#{tAn}" itemValue="#{tAn}"/>                    
+        </p:selectOneMenu>
+        <br/>
+        
+    </ui:fragment>
+</ui:composition>
+
+

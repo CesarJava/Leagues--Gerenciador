@@ -1,0 +1,66 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE composition PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<ui:composition xmlns="http://www.w3.org/1999/xhtml"
+                xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+                xmlns:h="http://xmlns.jcp.org/jsf/html"
+                xmlns:f="http://xmlns.jcp.org/jsf/core"
+                xmlns:p="http://primefaces.org/ui">
+    <ui:fragment>
+        <p:outputLabel value="Nome*:" style="color: white"/>
+        <p:inputText id="nome" value="#{jogadorBean.jogador.nome}"
+                     disabled="#{!jogadorBean.habilitaChave}"
+                     required="true" requiredMessage="digite nome"/>
+        <p:outputLabel value="#{jogadorBean.msgChave}" style="color:#ffffff; float:left " />
+        <p:outputLabel value="#{jogadorBean.nome}" style="color:#ffffff; float:left " />
+        <p:message for="nome" style="color:white;"/>
+        <br/>
+        <p:outputLabel value="Idade:" style="color: white"/>
+        <p:inputText id="idade" value="#{jogadorBean.jogador.idade}"
+                     disabled="#{!jogadorBean.habilitaEdicao}"
+                     required="true" requiredMessage="Jogador precisa de idade"/>
+        <p:message for="idade" style="color:white "/>
+        <br/>
+        <p:outputLabel value="Nacionalidade:" style="color: white"/>
+        <p:inputText id="nacionalidade" value="#{jogadorBean.jogador.paisOrigem}"
+                     disabled="#{!jogadorBean.habilitaEdicao}"
+                     required="true" requiredMessage="Jogador precisa de nacionalidade"/>
+        <p:message for="nacionalidade" style="color:white  "/>
+        <br/>
+        <p:outputLabel value="Rota:" style="color: white"/>
+        <p:inputText id="rota" value="#{jogadorBean.jogador.rota}"
+                     disabled="#{!jogadorBean.habilitaEdicao}"
+                     required="true" requiredMessage="Jogador precisa de uma rota"/>
+        <p:message for="rota" style="color:white  "/>
+        <br/>
+        <p:outputLabel value="Campeões mais jogados:" style="color: white"/>
+        <p:selectManyMenu value="#{jogadorBean.campeoesSelecionados}"
+                          disabled="#{!jogadorBean.habilitaEdicao}" showCheckbox="true">
+            <f:selectItems value="#{jogadorBean.listaCamp}"
+                           var="e" itemLabel="#{e}" itemValue="#{e}"/>                                        
+        </p:selectManyMenu>
+        <br/>
+         <p:outputLabel value="Time:" style="color: white"/>
+         <p:selectOneMenu value="#{jogadorBean.timeSelecionado}"
+                         disabled="#{!jogadorBean.habilitaEdicao}">
+             <f:selectItem itemLabel="Sem Time" itemValue="Sem Time"/>
+            <f:selectItems value="#{jogadorBean.listaTimes}"
+                           var="p" itemLabel="#{p}" itemValue="#{p}"/>                    
+        </p:selectOneMenu>
+        <br/>  
+         <p:outputLabel value="Equipamento:" style="color: white"/>
+        <p:selectManyMenu value="#{jogadorBean.equipsSelecionados}"
+                          disabled="#{!jogadorBean.habilitaEdicao}" showCheckbox="true">
+            <f:selectItems value="#{jogadorBean.listaEquip}"
+                           var="e" itemLabel="#{e}" itemValue="#{e}"/>                                        
+        </p:selectManyMenu>
+        <br/>
+        
+        
+        
+        
+        
+        
+        
+        
+    </ui:fragment>
+</ui:composition>

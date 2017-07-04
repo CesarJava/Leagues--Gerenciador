@@ -1,0 +1,104 @@
+<?xml version='1.0' encoding='UTF-8' ?> 
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:p="http://primefaces.org/ui">
+    <h:head>
+        <title>Leagues of Legends Manager</title>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        <h:outputStylesheet name="/css/style.css"/>
+
+
+    </h:head>
+    <h:body>
+        <div id="page">
+            <div id="header">
+                <a id="logo" href="">
+                    <h:graphicImage library="images" name="logo.png" alt=""></h:graphicImage>
+                </a>
+                <ul id="navi" class="navigation">
+                    <ui:insert name="navi">                        
+                        <h:form>
+
+                            <p:menubar style="float: left; background-color: transparent;margin: 50px 40px 0 0;">
+                                <p:submenu label="Campeonato" class="menuItem" >
+                                    <p:menuitem value="Inserir" class="menuItem" outcome="/Campeonato/create" icon="ui-icon-plus" />
+
+
+                                    <p:submenu label="Gerenciar Funcionarios">
+                                        <p:menuitem value="Inserir" outcome="/Staff/create" icon="ui-icon-plus" />
+
+                                    </p:submenu>
+
+                                </p:submenu>
+
+                                <p:submenu label="Gerenciar Times">
+                                    <p:menuitem value="Inserir" outcome="/Times/create" icon="ui-icon-plus" />
+                                    <p:menuitem value="Alterar" outcome="/Times/update" icon="ui-icon-pencil"/>
+                                    <p:menuitem value="Excluir" outcome="/Times/delete" icon="ui-icon-trash"/>
+                                </p:submenu>
+                                <p:submenu label="Gerenciar Membros" >
+
+                                    <p:submenu label="Gerenciar Jogadores">
+                                        <p:menuitem value="Inserir" outcome="/Jogador/create" icon="ui-icon-plus" />
+                                        <p:menuitem value="Alterar" outcome="/Jogador/update" icon="ui-icon-pencil"/>
+                                        <p:menuitem value="Excluir" outcome="/Jogador/delete" icon="ui-icon-trash"/>
+                                    </p:submenu>
+                                    <p:submenu label="Gerenciar Tecnicos">
+                                        <p:menuitem value="Inserir" outcome="/Coach/create" icon="ui-icon-plus" />
+                                        <p:menuitem value="Alterar" outcome="/Coach/update" icon="ui-icon-pencil"/>
+                                        <p:menuitem value="Excluir" outcome="/Coach/delete" icon="ui-icon-trash"/>
+                                    </p:submenu>                                   
+
+
+                                </p:submenu>
+                                <p:submenu label="Gerenciar Outros">
+                                    <p:submenu label="Gerenciar Midia">
+                                        <p:menuitem value="Inserir" outcome="/Midia/create" icon="ui-icon-plus" />
+                                        <p:menuitem value="Excluir" outcome="/Midia/delete" icon="ui-icon-trash"/>
+                                    </p:submenu>
+                                    <p:submenu label="Gerenciar Patrocinador">
+                                        <p:menuitem value="Inserir" outcome="/Patrocinador/create" icon="ui-icon-plus" />
+
+                                    </p:submenu>
+                                    <p:submenu label="Gerenciar Equipamento">
+                                        <p:menuitem value="Inserir" outcome="/Equipamento/create" icon="ui-icon-plus" />
+                                    </p:submenu>
+                                    <p:submenu label="Gerenciar Campeoes">
+                                        <p:menuitem value="Inserir" outcome="/Campeoes/create" icon="ui-icon-plus" />                                        
+
+                                    </p:submenu>
+                                    <p:submenu label="Gerenciar Local">
+                                        <p:menuitem value="Inserir" outcome="/LocalEvento/create" icon="ui-icon-plus" />
+
+                                    </p:submenu>
+                                </p:submenu>
+
+                            </p:menubar>
+                        </h:form>
+                    </ui:insert>
+
+                </ul>
+            </div>
+            <div id="body" >
+                <ui:insert name="body">
+                    <div class="featured">                         
+                        <div id="content" class="section">
+
+                            <ui:insert name="content">
+
+
+                            </ui:insert>
+
+                        </div>    
+
+                    </div>
+                </ui:insert>
+            </div>
+
+
+
+        </div>
+    </h:body>
+</html>

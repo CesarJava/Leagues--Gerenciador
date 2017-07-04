@@ -1,0 +1,31 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE composition PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<ui:composition xmlns="http://www.w3.org/1999/xhtml"
+                template="./../template.xhtml"
+                xmlns:h="http://xmlns.jcp.org/jsf/html"
+                xmlns:f="http://xmlns.jcp.org/jsf/core"
+                xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+                xmlns:c="http://xmlns.jcp.org/jsp/jstl/core">
+    <ui:define name="content">
+        <h:form>
+            <c:if test="#{coachBean.nome==null}">
+                <h:selectOneMenu value="#{coachBean.nome}">
+                    <f:selectItems
+                        value="#{coachBean.listaCoachs}"
+                        var="item" itemLabel="#{item}" itemValue="#{item}"/>
+                </h:selectOneMenu>
+                <c:set target="#{coachBean}" property="habilitaChave" value="#{false}" />
+                <c:set target="#{coachBean}" property="habilitaEdicao" value="#{false}" />
+                <h:commandButton value="buscar" 
+                                 action="#{coachBean.buscar()}" />
+            </c:if>            
+            <c:if test="#{coachBean.nome!=null}">
+                <ui:include src="/Coach/form.xhtml"/>
+                <h:commandButton value="excluir" 
+                                 action="#{coachBean.excluir()}"/>
+            </c:if>
+        </h:form>
+    </ui:define>
+</ui:composition>
+
+

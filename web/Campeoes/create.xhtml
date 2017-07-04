@@ -1,0 +1,16 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE composition PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<ui:composition xmlns="http://www.w3.org/1999/xhtml"
+                template="/template.xhtml"
+                xmlns:h="http://xmlns.jcp.org/jsf/html"
+                xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+                xmlns:c="http://xmlns.jcp.org/jsp/jstl/core">
+    <ui:define name="content" >
+        <h:form>
+            <c:set target="#{campeoesBean}" property="habilitaChave" value="#{true}" />
+            <c:set target="#{campeoesBean}" property="habilitaEdicao" value="#{true}" />
+            <ui:include src="/Campeoes/form.xhtml"/>
+            <h:commandButton value="inserir" action="#{campeoesBean.inserir()}"/>
+        </h:form>
+    </ui:define>
+</ui:composition>
